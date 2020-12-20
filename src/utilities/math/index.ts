@@ -1,1 +1,1 @@
-export const dumyFunc = () => {};
+export * from "./matmul";
