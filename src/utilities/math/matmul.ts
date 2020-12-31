@@ -1,4 +1,4 @@
-import { Tensor2D, tensor2d } from "@tensorflow/tfjs-node";
+import { Tensor2D, tensor2d, gather } from "@tensorflow/tfjs-node";
 
 export function matMul(left: Tensor2D, right: Tensor2D) {
   const [lr, lc] = left.shape;
@@ -9,7 +9,6 @@ export function matMul(left: Tensor2D, right: Tensor2D) {
       "Matrix Size does not match. Inner matrix dimension must agree."
     );
   }
-
   const leftArr = left.dataSync();
   const rightArr = right.dataSync();
 
